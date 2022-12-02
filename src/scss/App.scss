@@ -1,45 +1,77 @@
 @import "./variables";
 
-// All
-
-// For mobile phones
-@media only screen and (max-width: 768px) {}
-
-// For desktop
-@media only screen and (min-width: 769px) {}
-
-
 body {
   overflow: hidden;
 }
 
+// All
 .payment-page {
   display: flex;
   justify-content: center;
   align-items: center;
   transform: translateY(-50%);
-  margin-top: 50vh;
 }
 
 .order-info {
   display: flex;
+  color: $primary-color;
   flex-direction: column;
-  gap: 150px;
 
   span#id,
   span#cost {
-    font-size: 128px;
-    color: $primary-color;
-    margin-left: 128px;
-    font-weight: 600;
     display: flex;
     flex-direction: column;
-
+    font-weight: 600;
 
     span {
-      font-size: 64px;
       color: white;
     }
   }
+}
 
+// For mobile phones
+@media only screen and (max-width: 768px) {
+  .payment-page {
+    flex-direction: column;
+    margin-top: 40vh;
+  }
+
+  .order-info {
+    margin-top: 48px;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  span#id,
+  span#cost {
+    span {
+      font-size: 24px;
+    }
+  }
+
+  .order-info span:nth-child(2) {
+    margin-top: 16px;
+  }
+}
+
+// For desktop
+@media only screen and (min-width: 769px) {
+  .payment-page {
+    margin-top: 50vh;
+  }
+
+  .order-info {
+    gap: 150px;
+
+    span#id,
+    span#cost {
+      font-size: 128px;
+      margin-left: 128px;
+
+      span {
+        font-size: 64px;
+      }
+    }
+
+  }
 }
