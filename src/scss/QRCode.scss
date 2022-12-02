@@ -1,0 +1,10 @@
+@import "./variables";
+$preferred: 666px;
+
+
+img.qr {
+    width: min(40vw, $preferred);
+    height: min(40vw, $preferred);
+    image-rendering: crisp-edges;
+    mix-blend-mode: hard-light;
+}
