@@ -4,6 +4,9 @@
 ![Client Side (smartphone)](https://i.imgur.com/Z7Znd8s.png)
 ---
 Todos
+- [x] Develop the frontend.
+- [x] Create the base schema and model.
+- [x] Create the base package and product classes.
 - [ ] Make the database fully functional.
 - [ ] Create an admin panel.
 - [ ] Handle success and fail on payment.
