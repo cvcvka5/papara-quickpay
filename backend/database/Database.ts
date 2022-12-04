@@ -1,4 +1,7 @@
 import mongoose from "mongoose";
+import Package from '../classes/Package';
+import Product from '../classes/Product';
+import Order from './models/Order';
 
 abstract class Database {
   protected _connected: boolean = false;
@@ -7,7 +10,7 @@ abstract class Database {
 }
 
 
-class DatabaseQuickpay extends Database {
+class OrdersDatabase extends Database {
 
   constructor() {
     super();
@@ -20,5 +23,12 @@ class DatabaseQuickpay extends Database {
     this._connected = true;
 
     return this._connected;
+  }
+
+  async addOrder(pack: Package): Promise<void> {
+    if (!this._connected) { await this.connect() }
+
+    const order = new Order({ "package": pack });
+    await order.save();
   }
 }
