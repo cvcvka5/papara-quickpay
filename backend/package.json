@@ -6,6 +6,6 @@
     "mongoose": "^6.7.5"
   },
   "scripts": {
-    "dev": "nodemon --watch ./**/*.ts --exec ts-node ./main.ts"
+    "dev": "nodemon --watch ./**/*.ts --exec ts-node ./src/main.ts"
   }
 }

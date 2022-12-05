@@ -2,5 +2,19 @@ POST http://localhost:5174/order/154/create HTTP/1.1
 Content-Type: application/json
 
 {
-  "price": 15.0
+  "packageName": "Big Mac Menu",
+  "products": [
+    { 
+      "name": "Big Mac",
+      "price": 24.90
+    },
+    { 
+      "name": "Fuse Tea (Normal)",
+      "price": 7.90
+    },
+    {
+      "name": "Large Fries",
+      "price": 14.99
+    }
+  ]
 }

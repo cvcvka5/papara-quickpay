@@ -32,3 +32,5 @@ class OrdersDatabase extends Database {
     await order.save();
   }
 }
+
+export { OrdersDatabase, Database };
